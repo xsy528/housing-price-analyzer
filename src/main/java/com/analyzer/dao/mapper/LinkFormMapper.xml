@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.analyzer.dao.mapper.LinkFormMapper">
+
+    <resultMap type="com.analyzer.api.LinkForm" id="LinkFormResult">
+        <id property="id" column="id" />
+        <!-- 	saID,receiveName,address,phone,customer_id -->
+        <result property="" column="" />
+        <result property="" column="" />
+        <result property="" column="" />
+        <result property="" column="" />
+        <result property="" column="" />
+        <result property="" column="" />
+        <result property="" column="" />
+        <result property="" column="" />
+    </resultMap>
+
+    <!-- 给定父类的id，查找子类对象 -->
+   <!-- <select id="selectAllbyCondition" parameterType="com.analyzer.api.condition.BuyCondition" resultType="BHPResult">
+		select * 
+		 from url_store 
+		  where url=#{URL}
+	</select>
+    <insert id="saveOne" parameterType="com.analyzer.model.Model" useGeneratedKeys="true" keyProperty="id">
+		insert into url_store(url) 
+		values(#{url})
+	</insert>
+
+    <insert id="saveAll" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
+        insert into url_store
+        (url)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.url},#{item.url},#{item.url},#{item.url})
+        </foreach>
+    </insert>
+
+    <delete id="deleteOne" parameterType="int">
+		delete from 
+		where id=#{id} 
+	</delete>-->
+</mapper>

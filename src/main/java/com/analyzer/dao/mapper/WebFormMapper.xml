@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.analyzer.dao.mapper.WebFormMapper">
+
+    <resultMap type="com.analyzer.api.WebForm" id="WebFormResult">
+        <id property="id" column="id" />
+        <result property="web" column="w_web" />
+        <result property="webname" column="w_web_name" />
+        <result property="firstweb" column="w_first_web" />
+        <result property="reliability" column="w_reliability" />
+        <result property="isRHP" column="w_is_rhp" />
+    </resultMap>
+
+    <!-- 给定父类的id，查找子类对象 -->
+     <select id="selectAll" resultType="BHPResult">
+         select *
+          from web_form
+     </select>
+    <!--<insert id="saveOne" parameterType="com.analyzer.model.Model" useGeneratedKeys="true" keyProperty="id">
+        insert into web_form(url)
+        values(#{url})
+    </insert>
+
+    <insert id="saveAll" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
+        insert into web_form
+        (url)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.url},#{item.url},#{item.url},#{item.url})
+        </foreach>
+    </insert>
+
+    <delete id="deleteOne" parameterType="int">
+        delete from
+        where id=#{id}
+    </delete>-->
+</mapper>
